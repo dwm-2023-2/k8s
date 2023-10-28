@@ -5,9 +5,9 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  ingressClassName: ingress-api
   rules:
-  - http:
+    - host: api.info
+    - http:
       paths:
       - path: api-svc
         pathType: Prefix
