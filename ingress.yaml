@@ -5,10 +5,15 @@ metadata:
   namespace: dwm-como-esta
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "nodeport-service"
+    nginx.ingress.kubernetes.io/cors-allow-methods: "GET, POST, PUT"
+    nginx.ingress.kubernetes.io/cors-allow-headers: "Authorization"
+
+
 spec:
   rules:
-    - host: api-svc
-      http:
+    - http:
         paths:
           - pathType: Prefix
             path: "/"
