@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: api
-        image: uiuq/diario-online-backend:1
+        image: uiuq/diario-online-backend:cors
         ports:
           - containerPort: 8080
