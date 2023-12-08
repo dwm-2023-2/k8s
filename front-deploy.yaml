@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: front-deploy
-        image: uiuq/diario-online-frontend:5
+        image: uiuq/diario-online-frontend:6
         ports:
           - containerPort: 5173
